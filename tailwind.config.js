@@ -20,6 +20,11 @@ module.exports = {
       },
       boxShadow: {
         'low': '0 10px 20px rgba(0, 0, 0, .04), 0 2px 6px rgba(0, 0, 0, .04)'
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'ui-sans-serif', 'system-ui'],
+        'geo': ['Geologica', 'sans-serif', 'ui-sans-serif', 'system-ui']
+      
       }
     },
   },
