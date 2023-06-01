@@ -16,11 +16,11 @@
   }
   .rate:not(:checked) > label {
       float:right;
-      width:1em;
+      width: 1em;
       overflow:hidden;
       white-space:nowrap;
       cursor:pointer;
-      font-size:20px;
+      font-size: 17px;
       color:#ccc;
   }
   .rate:not(:checked) > label:before {
@@ -54,7 +54,7 @@
       overflow:hidden;
       white-space:nowrap;
       cursor:pointer;
-      font-size:20px;
+      font-size: 17px;
       color:#ccc;
   }
   .rateone:not(:checked) > label:before,
