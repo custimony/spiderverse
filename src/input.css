@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Roboto', monospace;
+  }
+}
+
+@layer component {
+  .rate:not(:checked) > input {
+    /* position:absolute;
+    top: -9999px; */
+    display: none;
+  }
+  .rate:not(:checked) > label {
+      float:right;
+      width:1em;
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:20px;
+      color:#ccc;
+  }
+  .rate:not(:checked) > label:before {
+      content: '★ ';
+  }
+  .rate > input:checked ~ label {
+      color: #ffc700;    
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+      color: #deb217;  
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+  }
+
+  .rateone:not(:checked) > input,
+  .ratetwo:not(:checked) > input {
+    /* position:absolute;
+    top: -9999px; */
+    display: none;
+  }
+  .rateone:not(:checked) > label,
+  .ratetwo:not(:checked) > label {
+      float:right;
+      width:1em;
+      overflow:hidden;
+      white-space:nowrap;
+      cursor:pointer;
+      font-size:20px;
+      color:#ccc;
+  }
+  .rateone:not(:checked) > label:before,
+  .ratetwo:not(:checked) > label:before {
+      content: '★ ';
+  }
+  .rateone > input:checked ~ label,
+  .ratetwo > input:checked ~ label {
+      color: #ffc700;    
+  }
+  .rateone:not(:checked) > label:hover,
+  .rateone:not(:checked) > label:hover ~ label,
+  .ratetwo:not(:checked) > label:hover,
+  .ratetwo:not(:checked) > label:hover ~ label {
+      color: #deb217;  
+  }
+  .rateone > input:checked + label:hover,
+  .rateone > input:checked + label:hover ~ label,
+  .rateone > input:checked ~ label:hover,
+  .rateone > input:checked ~ label:hover ~ label,
+  .rateone > label:hover ~ input:checked ~ label,
+  .ratetwo > input:checked + label:hover,
+  .ratetwo > input:checked + label:hover ~ label,
+  .ratetwo > input:checked ~ label:hover,
+  .ratetwo > input:checked ~ label:hover ~ label,
+  .ratetwo > label:hover ~ input:checked ~ label {
+      color: #c59b08;
+  }
+
+}
