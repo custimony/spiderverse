@@ -6,8 +6,9 @@ module.exports = {
       triangle: 'polygon(50% 0%, 34% 30%, 66% 31%);',
       card: 'circle(64.3% at 50% 50%);',
       arrow: 'polygon(0 0, 100% 0, 100% 50%, 100% 72%, 0 51%);',
-      arrow_invert: 'polygon(0 100%, 100% 100%, 100% 57%, 100% 72%, 0 18%);'
-
+      arrow_invert: 'polygon(0 100%, 100% 100%, 100% 57%, 100% 72%, 0 18%);',
+      right_angle: 'polygon(0 0, 0% 100%, 99% 0);',
+      message: 'polygon(0% 0%, 100% 0%, 100% 75%, 40% 76%, 18% 100%, 18% 75%, 0% 75%);'
     },
     extend: {
       colors: {
