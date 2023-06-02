@@ -20,7 +20,8 @@ module.exports = {
         'primary-white-opaq': 'rgba(215,101,158, 0.5)'
       },
       boxShadow: {
-        'low': '0 10px 20px rgba(0, 0, 0, .04), 0 2px 6px rgba(0, 0, 0, .04)'
+        'low': '0 10px 20px rgba(0, 0, 0, .04), 0 2px 6px rgba(0, 0, 0, .04)',
+        'low-saturate': '0px 0px 15px 9px rgba(0,0,0,0.1);'
       },
       fontFamily: {
         'roboto': ['Roboto', 'ui-sans-serif', 'system-ui'],
