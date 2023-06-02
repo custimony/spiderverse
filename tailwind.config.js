@@ -26,6 +26,9 @@ module.exports = {
         'roboto': ['Roboto', 'ui-sans-serif', 'system-ui'],
         'geo': ['Geologica', 'sans-serif', 'ui-sans-serif', 'system-ui']
       
+      },
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(340px, 1fr))',
       }
     },
   },
