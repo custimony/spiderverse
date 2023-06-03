@@ -45,6 +45,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         'auto-fit': 'repeat(auto-fit, minmax(340px, 1fr))',
+      },
+      gridTemplateRows: {
+        'two-column': 'repeat(2, 1fr)'
       }
     },
   },
