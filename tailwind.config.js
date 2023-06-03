@@ -8,7 +8,8 @@ module.exports = {
       arrow: 'polygon(0 0, 100% 0, 100% 50%, 100% 72%, 0 51%);',
       arrow_invert: 'polygon(0 100%, 100% 100%, 100% 57%, 100% 72%, 0 18%);',
       right_angle: 'polygon(0 0, 0% 100%, 99% 0);',
-      message: 'polygon(0% 0%, 100% 0%, 100% 75%, 40% 76%, 18% 100%, 18% 75%, 0% 75%);'
+      message: 'polygon(0% 0%, 100% 0%, 100% 75%, 40% 76%, 18% 100%, 18% 75%, 0% 75%);',
+      rhombus: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);'
     },
     extend: {
       colors: {
@@ -17,7 +18,21 @@ module.exports = {
         'font-color': '#161616',
         'border-color': '#f2f6ff',
         'primary-color': '#ffc700',
-        'primary-white-opaq': 'rgba(215,101,158, 0.5)'
+        'primary-white-opaq': 'rgba(215,101,158, 0.5)',
+        'testimony-background': 'rgb(249, 250, 251/1)',
+        'border-color': 'rgb(229, 231, 235/1)',
+        'text-color': 'rgb(156, 163, 175/1)',
+        'before-bg': 'rgb(29, 161, 242/1)'
+      },
+      animation: {
+        'marquee-slower': 'marquee 125s linear infinite'
+      },
+
+      keyframes: {
+        marquee: {
+          '0% ': {transform: 'translateZ(0)'},
+          '100%': { transform:' translate3d(-100%,0,0)'}
+        }
       },
       boxShadow: {
         'low': '0 10px 20px rgba(0, 0, 0, .04), 0 2px 6px rgba(0, 0, 0, .04)',
