@@ -24,14 +24,30 @@ module.exports = {
         'text-color': 'rgb(156, 163, 175/1)',
         'before-bg': 'rgb(29, 161, 242/1)'
       },
-      animation: {
-        'marquee-slower': 'marquee 125s linear infinite'
-      },
+      
 
       keyframes: {
         marquee: {
           '0% ': {transform: 'translateZ(0)'},
           '100%': { transform:' translate3d(-100%,0,0)'}
+        },
+        swipe: {
+          '50%' :{
+            transform: 'translateX(130%) rotate(45deg) translateY(1.5rem)'
+          },
+          '80%': {
+              'z-index': '10'
+          },
+          '100%' : {
+            'margin-left': '1.5rem',
+              'margin-right': '1.5rem',
+              transform: 'translateY(1.5rem)',
+              'z-index': '10'
+          }
+        },
+        rotating: {
+          '0%, 100%': { transform: 'rotate(360deg)' },
+          '50%': { transform: 'rotate(0deg)' },
         }
       },
       boxShadow: {
@@ -48,7 +64,13 @@ module.exports = {
       },
       gridTemplateRows: {
         'two-column': 'repeat(2, 1fr)'
-      }
+      },
+      animation: {
+        'marquee-slower': 'marquee 125s linear infinite',
+        swipe: 'swipe .75s ease-in-out 1',
+        rotating: 'rotating 30s linear infinite',
+      },
+
     },
   },
   plugins: [

@@ -21,86 +21,103 @@
       <div class="flex flex-col items-center justify-center">
         <div class="flex items-center justify-center w-full mt-0 md:mt-24">
           <div class="hidden w-2/12 text-center md:block">
-            <button class="rounded-full focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <button id="prevbtn" class="rounded-full transition focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none bg-blue-700">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 "><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button>
           </div> 
           <div class="relative w-full px-6 md:w-8/12 md:px-6">
             <div class="relative z-40 w-24 h-24 mx-auto transform translate-y-12 rounded-full md:transform-none md:absolute md:w-40 md:h-40 md:-top-16 md:-left-12">
-              <img src="https://files.selar.co/website-assets/landing/images/selar-testimonial-triciabiz.png" class="absolute inset-0 object-cover w-full h-full rounded-full"> 
-              <img src="https://files.selar.co/website-assets/landing/images/selar-testimonial-steve-harris.png" class="absolute inset-0 object-cover w-full h-full rounded-full">
+              <img id="testimony-image" src="" class="absolute animate-bounce transition-all inset-0 object-cover w-full h-full rounded-full"> 
+              <img id="testimony-image" src="" class="absolute  inset-0 object-cover w-full h-full rounded-full">
+              <img id="testimony-image" src="" class="absolute inset-0 object-cover w-full h-full rounded-full">
+              <img id="testimony-image" src="" class="absolute inset-0 object-cover  w-full h-full rounded-full">
             </div> 
             <div class="relative">
-              <div class="relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96">
+              <div id="testimony" class="testimony swipe relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96">
                 <div>
-                  <div>
+                  <div id="testimony-data">
                     I’ve used quite a number of e-commerce platforms, but Selar’s amazing! They’re truly interested in your growth and are constantly listening to the customers and tweaking and fine tuning their app. They do the heavy lifting Totally recommend them! 
                   </div> 
                   <div class="mt-10">
                     <div class="flex items-center space-x-2">
-                      <div class="font-bold">Steve Harris</div>
+                      <div id="name" class="font-bold">Steve Harris</div>
                     </div> 
-                    <p class="mt-3 text-sm">
-                     Business Accelerator &amp; Coach
-                      
+                    <p id="username" class="mt-3 text-sm">
+                     Business Accelerator &amp; Coach  
                     </p>
                   </div>
                 </div>
               </div> 
-              <div class="absolute top-0 z-20 flex items-center justify-center px-6 pb-20 mx-3 text-sm transform translate-y-2 bg-white rounded-lg shadow-md pt-28 md:translate-y-3 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="testimony absolute top-0 z-20 flex items-center justify-center px-6 pb-20 mx-3 text-sm transform translate-y-2 bg-white rounded-lg shadow-md pt-28 md:translate-y-3 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
-                  <div> 
+                  <div id="testimony-data"> 
                     Selar has an Affiliate System that works! They rescued me during my Monetize Your Knowledge Course Launch. It’s easy to host your courses and digital products on Selar and you can quickly receive your product payment from them. 
                   </div> 
                   <div class="mt-10">
                     <div class="flex items-center space-x-2">
-                      <div class="font-bold">Tricia Biz</div>
+                      <div id="name" class="font-bold">Tricia Biz</div>
                     </div> 
-                    <p class="mt-3 text-sm">
+                    <p id="username" class="mt-3 text-sm">
                       Marketing &amp; Launch Expert
                     </p>
                   </div>
                 </div>
               </div> 
-              <div class="absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="testimony absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
-                  <p>
+                  <p id="testimony-data">
                     Anim nisi in sint proident pariatur fugiat quis ea cupidatat. Ipsum sit adipisicing in ut. Esse aliquip officia sunt anim incididunt irure ex cillum excepteur sit eu cupidatat laborum. Non commodo laborum tempor adipisicing esse et minim veniam cupidatat ipsum officia nostrud excepteur. In nisi sint ex dolore nostrud eu. Qui amet do consequat qui aute ad. Aute velit anim sit fugiat duis aliqua consectetur velit.
                   </p>
+                  <div class="mt-10">
+                    <div class="flex items-center space-x-2">
+                      <div id="name" class="font-bold">Tricia Biz</div>
+                    </div> 
+                    <p id="username" class="mt-3 text-sm">
+                      Marketing &amp; Launch Expert
+                    </p>
+                  </div>
                 </div>
               </div> 
-              <div class="absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="testimony absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
-                  <p>
+                  <p id="testimony-data">
                     Anim nisi in sint proident pariatur fugiat quis ea cupidatat. Ipsum sit adipisicing in ut. Esse aliquip officia sunt anim incididunt irure ex cillum excepteur sit eu cupidatat laborum. Non commodo laborum tempor adipisicing esse et minim veniam cupidatat ipsum officia nostrud excepteur. In nisi sint ex dolore nostrud eu. Qui amet do consequat qui aute ad. Aute velit anim sit fugiat duis aliqua consectetur velit.
                   </p>
+                  <div class="mt-10">
+                    <div class="flex items-center space-x-2">
+                      <div id="name" class="font-bold">Tricia Biz</div>
+                    </div> 
+                    <p id="username" class="mt-3 text-sm">
+                      Marketing &amp; Launch Expert
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div> 
           <div class="hidden text-center md:block md:w-2/12">
-            <button class="transform rotate-180 rounded-full focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
+            <button id="nextbtn" class="transform rotate-180 rounded-full bg-blue-700 focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button>
           </div>
         </div>
         <div class="mt-20">
           <div class="flex items-center justify-center mb-12 space-x-10 md:hidden">
-            <button class="rounded-full focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
+            <button class="rounded-full focus:ring-1 ring-white ring-opacity-10 bg-blue-700 ring-offset-2 focus:outline-none">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button> 
-            <button class="transform rotate-180 rounded-full focus:ring-1 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
+            <button class="transform rotate-180 rounded-full focus:ring-1 bg-blue-700 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button>
           </div> 
-          <div class="flex items-center justify-center space-x-2">
-            <div class="w-2 h-2 transition-all bg-white rounded-full"></div>
-            <div class="w-2 h-2 transition-all bg-white rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-white rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-white rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-white rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-white rounded-full opacity-50"></div>
-            
+          <div class="flex items-center justify-center space-x-2 selection">
+            <!-- <div class="w-2 h-2 transition-all bg-blue-700 rounded-full"></div>
+            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
+            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
+            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
+            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
+            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
+             -->
           </div>
         </div>
     </div>
@@ -108,4 +125,208 @@
   </main>
   
 </body>
+
+<script>
+
+  const testimonyData = [
+    {
+      name: 'Abiodun Abidoye',
+      username: '@i_am_habidoye',
+      photo: 'https://lh3.googleusercontent.com/a/AAcHTtcUy_Bx3GTCUrJMdzd0dr_9da9anMt-UjdN8Z-h4w=s288-c-no',
+      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      name: 'Ariyo Ayomide',
+      username: '@i_am_ariyo',
+      photo: 'https://media.licdn.com/dms/image/C5603AQExdNIhfkS27Q/profile-displayphoto-shrink_800_800/0/1647641857288?e=1691625600&v=beta&t=uQfeouy-lPiXq_3TeCGdbNIYVHklqRgT8qdhwG_mZ3s',
+      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      name: 'Adams Paul',
+      username: '@i_am_adams',
+      photo: 'https://lh3.googleusercontent.com/a/AAcHTtcUy_Bx3GTCUrJMdzd0dr_9da9anMt-UjdN8Z-h4w=s288-c-no',
+      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    },
+    {
+      name: 'Ibidapo Daniel',
+      username: '@i_am_daniel',
+      photo: 'https://media.licdn.com/dms/image/D4D03AQG3TAhMXARZKQ/profile-displayphoto-shrink_800_800/0/1681636366554?e=1691625600&v=beta&t=TC6JNXu3ANCXUd6SI_4BAWwyDkw9lrz-zW9sh-GxVJ4',
+      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    }
+  ]
+
+
+  
+  const testimonies = document.querySelectorAll('#testimony')
+  const testimonyImage = document.querySelectorAll('#testimony-image')
+  const selection = document.querySelector('.selection')
+  const nextButton = document.getElementById('nextbtn')
+  const prevButton = document.getElementById('prevbtn')
+  const animation = document.querySelector('.swipe')
+  let count = 0
+
+  // const testimonyNew = Object.values(testimony)
+  // const testimonyImageNew = Object.values(testimonyImage)
+
+  // testimonyNew.map(async data => {
+  //   data.textContent = await testimonyData[testimonyNew.indexOf(data)].message
+  // })
+
+  // testimonyImageNew.map(data => {
+  //   data.src = testimonyImageNew[testimonyImageNew.indexOf(data)].photo
+    
+  // })
+
+  // testimony.forEach((data) => {
+  //   console.log(testmony.indexOf(data))
+
+  
+  // })
+  testimonyData.forEach((testimony) => {
+    const dot = document.createElement('div')
+    dot.classList.add('w-2', 'h-2', 'transition-all', 'bg-blue-700', 'rounded-full', 'opacity-50', 'dot')
+    selection.appendChild(dot)
+  })
+
+
+  testimonies.forEach((testimony, index) => {
+    const text = testimony.querySelector('#testimony-data')
+    const name = testimony.querySelector('#name')
+    const username = testimony.querySelector('#username')
+    text.textContent = testimonyData[index].message
+    name.textContent = testimonyData[index].name
+    username.textContent = testimonyData[index].username
+    
+    // console.log(index)
+    toggleDot()
+  })
+
+  testimonyImage.forEach((testimony, index) => {
+    
+    testimony.src = testimonyData[index].photo
+  })
+
+  
+
+  function nextTestimony () {
+    count += 1
+    if (count < testimonyData.length) {
+      const first = testimonyData.shift()
+      testimonyData.push(first)
+      console.log(count)
+    }
+
+    if (count >= testimonyData.length) {
+      count = 0
+      const first = testimonyData.shift()
+      testimonyData.push(first)
+    }
+
+    
+    animation.classList.remove('animate-swipe')
+
+    animation.classList.add('animate-swipe')
+
+
+
+    testimonies.forEach((testimony, index) => {
+      const text = testimony.querySelector('#testimony-data')
+      const name = testimony.querySelector('#name')
+      const username = testimony.querySelector('#username')
+      text.textContent = testimonyData[index].message
+      name.textContent = testimonyData[index].name
+      username.textContent = testimonyData[index].username
+    // console.log(index)
+    
+    })
+    testimonyImage.forEach((testimony, index) => {
+      testimony.src = testimonyData[index].photo
+    
+    })
+
+    toggleDot()
+
+    setTimeout(() => {
+
+      animation.classList.remove('animate-swipe')
+    }, 800)
+
+    
+    
+  }
+
+  function prevTestimony () {
+
+    if (count === 0) {
+      count += testimonyData.length - 1 
+      const last = testimonyData.pop()
+      testimonyData.unshift(last)
+      console.log(count)
+
+    } else {
+
+      if (count < testimonyData.length) {
+        count -= 1
+        const last = testimonyData.pop()
+        testimonyData.unshift(last)
+        console.log(count)
+      }
+
+      if (count >= testimonyData.length) {
+        count = 0
+        const  last = testimonyData.pop()
+        testimonyData.unshift(last)
+      }
+
+
+    }
+
+    
+
+    
+
+    testimonies.forEach((testimony, index) => {
+    const text = testimony.querySelector('#testimony-data')
+    const name = testimony.querySelector('#name')
+    const username = testimony.querySelector('#username')
+    text.textContent = testimonyData[index].message
+    name.textContent = testimonyData[index].name
+    username.textContent = testimonyData[index].username
+    // console.log(index)
+    if (index === 0 ) {
+      testimony.classList.add('animate-swipe')
+    }
+
+    toggleDot()
+  })
+
+  }
+
+
+  function toggleDot () {
+    const dots = document.querySelectorAll('.dot')
+    dots.forEach((dot, index) => {
+      if (index === count) {
+        dot.classList.remove('opacity-50')
+      }else {
+        dot.classList.add('opacity-50')
+      }
+    })
+
+  }
+  
+  nextButton.addEventListener('click', nextTestimony)
+  prevButton.addEventListener('click', prevTestimony)
+
+  
+
+
+
+  // for (const key in testimony) {
+  //   console.log(key)
+  // }
+  
+
+  
+</script>
 </html>
