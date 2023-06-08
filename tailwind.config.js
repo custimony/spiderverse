@@ -48,6 +48,28 @@ module.exports = {
         rotating: {
           '0%, 100%': { transform: 'rotate(360deg)' },
           '50%': { transform: 'rotate(0deg)' },
+        },
+        comeup: {
+          '0%': {
+            'margin-left': '0.75rem',
+            'margin-right': '0.75rem',
+            transform: 'translateY(0.75rem)',
+          },
+          '100%': {
+              'margin-left': '0',
+              'margin-right': '0',
+              transform: 'translateY(0)',
+              'z-index': '30'
+          }
+          
+          },
+          comeup2: {
+            '100%': {
+              'margin-left': '0.75rem',
+              'margin-right': '0.75rem',
+              transform: 'translateY(0.75rem)',
+              'z-index': '20'
+            }
         }
       },
       boxShadow: {
@@ -69,6 +91,8 @@ module.exports = {
         'marquee-slower': 'marquee 125s linear infinite',
         swipe: 'swipe .75s ease-in-out 1',
         rotating: 'rotating 30s linear infinite',
+        comeup: 'comeup .75s ease-in-out 1',
+        comeup2: 'comeup2 .75s ease-in-out 1'
       },
 
     },

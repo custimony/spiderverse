@@ -983,20 +983,36 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
+@keyframes comeup {
+  0% {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    transform: translateY(0.75rem);
   }
 
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  100% {
+    margin-left: 0;
+    margin-right: 0;
+    transform: translateY(0);
+    z-index: 30;
   }
 }
 
-.animate-bounce {
-  animation: bounce 1s infinite;
+.animate-comeup {
+  animation: comeup .75s ease-in-out 1;
+}
+
+@keyframes comeup2 {
+  100% {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    transform: translateY(0.75rem);
+    z-index: 20;
+  }
+}
+
+.animate-comeup2 {
+  animation: comeup2 .75s ease-in-out 1;
 }
 
 @keyframes marquee {

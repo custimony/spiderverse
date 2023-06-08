@@ -13,7 +13,7 @@
   <title>CUSTIMONY TEMPLATE | TEMPLATE FIVE</title> 
 </head>
 <body>
-  <main class="max-w-screen m-0 min-h-screen bg-testimony-background-primary">
+  <main class="max-w-screen m-0 min-h-screen bg-testimony-background-primary overflow-hidden">
     <div class="container w-full mx-auto py-14 sm:px-0 px-2">
       <div class="w-full">
         <h1 class="font-bold text-center text-4xl font-geo">Testimonies</h1>
@@ -27,7 +27,7 @@
           </div> 
           <div class="relative w-full px-6 md:w-8/12 md:px-6">
             <div class="relative z-40 w-24 h-24 mx-auto transform translate-y-12 rounded-full md:transform-none md:absolute md:w-40 md:h-40 md:-top-16 md:-left-12">
-              <img id="testimony-image" src="" class="absolute animate-bounce transition-all inset-0 object-cover w-full h-full rounded-full"> 
+              <img id="testimony-image" src="" class="absolute inset-0 object-cover w-full h-full rounded-full"> 
               <img id="testimony-image" src="" class="absolute  inset-0 object-cover w-full h-full rounded-full">
               <img id="testimony-image" src="" class="absolute inset-0 object-cover w-full h-full rounded-full">
               <img id="testimony-image" src="" class="absolute inset-0 object-cover  w-full h-full rounded-full">
@@ -48,7 +48,7 @@
                   </div>
                 </div>
               </div> 
-              <div id="testimony" class="testimony absolute top-0 z-20 flex items-center justify-center px-6 pb-20 mx-3 text-sm transform translate-y-2 bg-white rounded-lg shadow-md pt-28 md:translate-y-3 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="comeup testimony come absolute top-0 z-20 flex items-center justify-center px-6 pb-20 mx-3 text-sm transform translate-y-2 bg-white rounded-lg shadow-md pt-28 md:translate-y-3 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
                   <div id="testimony-data"> 
                     Selar has an Affiliate System that works! They rescued me during my Monetize Your Knowledge Course Launch. It’s easy to host your courses and digital products on Selar and you can quickly receive your product payment from them. 
@@ -63,7 +63,7 @@
                   </div>
                 </div>
               </div> 
-              <div id="testimony" class="testimony absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="comeup2 testimony absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
                   <p id="testimony-data">
                     Anim nisi in sint proident pariatur fugiat quis ea cupidatat. Ipsum sit adipisicing in ut. Esse aliquip officia sunt anim incididunt irure ex cillum excepteur sit eu cupidatat laborum. Non commodo laborum tempor adipisicing esse et minim veniam cupidatat ipsum officia nostrud excepteur. In nisi sint ex dolore nostrud eu. Qui amet do consequat qui aute ad. Aute velit anim sit fugiat duis aliqua consectetur velit.
@@ -78,7 +78,7 @@
                   </div>
                 </div>
               </div> 
-              <div id="testimony" class="testimony absolute top-0 z-10 flex items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
+              <div id="testimony" class="testimony hidden absolute top-0 z-10 items-center justify-center px-6 pb-20 mx-6 text-xs transform translate-y-4 bg-white rounded-lg shadow-md pt-28 md:translate-y-6 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
                   <p id="testimony-data">
                     Anim nisi in sint proident pariatur fugiat quis ea cupidatat. Ipsum sit adipisicing in ut. Esse aliquip officia sunt anim incididunt irure ex cillum excepteur sit eu cupidatat laborum. Non commodo laborum tempor adipisicing esse et minim veniam cupidatat ipsum officia nostrud excepteur. In nisi sint ex dolore nostrud eu. Qui amet do consequat qui aute ad. Aute velit anim sit fugiat duis aliqua consectetur velit.
@@ -163,6 +163,8 @@
   const nextButton = document.getElementById('nextbtn')
   const prevButton = document.getElementById('prevbtn')
   const animation = document.querySelector('.swipe')
+  const animationcomeup = document.querySelector('.comeup')
+  const animationcomeup2 = document.querySelector('.comeup2')
   let count = 0
 
   // const testimonyNew = Object.values(testimony)
@@ -223,36 +225,32 @@
     }
 
     
-    animation.classList.remove('animate-swipe')
+    setTimeout(async() => {
+      await animation.classList.remove('animate-swipe')
+      animationcomeup.classList.remove('animate-comeup')
+      animationcomeup2.classList.remove('animate-comeup2')
+    }, 800)
 
     animation.classList.add('animate-swipe')
+    animationcomeup.classList.add('animate-comeup')
+    animationcomeup2.classList.add('animate-comeup2')
 
+    setTimeout(() => {
+      testimonies.forEach((testimony, index) => {
+        const text = testimony.querySelector('#testimony-data')
+        const name = testimony.querySelector('#name')
+        const username = testimony.querySelector('#username')
+        text.textContent = testimonyData[index].message
+        name.textContent = testimonyData[index].name
+        username.textContent = testimonyData[index].username
+      })
 
-
-    testimonies.forEach((testimony, index) => {
-      const text = testimony.querySelector('#testimony-data')
-      const name = testimony.querySelector('#name')
-      const username = testimony.querySelector('#username')
-      text.textContent = testimonyData[index].message
-      name.textContent = testimonyData[index].name
-      username.textContent = testimonyData[index].username
-    // console.log(index)
-    
-    })
+    }, 800)
     testimonyImage.forEach((testimony, index) => {
       testimony.src = testimonyData[index].photo
     
     })
-
-    toggleDot()
-
-    setTimeout(() => {
-
-      animation.classList.remove('animate-swipe')
-    }, 800)
-
-    
-    
+    toggleDot() 
   }
 
   function prevTestimony () {
@@ -281,25 +279,34 @@
 
     }
 
+    setTimeout(async() => {
+      await animation.classList.remove('animate-swipe')
+      animationcomeup.classList.remove('animate-comeup')
+      animationcomeup2.classList.remove('animate-comeup2')
+    }, 800)
+
+    animation.classList.add('animate-swipe')
+    animationcomeup.classList.add('animate-comeup')
+    animationcomeup2.classList.add('animate-comeup2')
+
+    setTimeout(() => {
+      testimonies.forEach((testimony, index) => {
+        const text = testimony.querySelector('#testimony-data')
+        const name = testimony.querySelector('#name')
+        const username = testimony.querySelector('#username')
+        text.textContent = testimonyData[index].message
+        name.textContent = testimonyData[index].name
+        username.textContent = testimonyData[index].username
+      })
+
+    }, 800)
+
+    testimonyImage.forEach((testimony, index) => {
+      testimony.src = testimonyData[index].photo
     
-
+    })
     
-
-    testimonies.forEach((testimony, index) => {
-    const text = testimony.querySelector('#testimony-data')
-    const name = testimony.querySelector('#name')
-    const username = testimony.querySelector('#username')
-    text.textContent = testimonyData[index].message
-    name.textContent = testimonyData[index].name
-    username.textContent = testimonyData[index].username
-    // console.log(index)
-    if (index === 0 ) {
-      testimony.classList.add('animate-swipe')
-    }
-
     toggleDot()
-  })
-
   }
 
 
