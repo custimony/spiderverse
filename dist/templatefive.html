@@ -33,7 +33,7 @@
               <img id="testimony-image" src="" class="absolute w-full h-full hidden object-cover inset-0 rounded-full">
             </div> 
             <div class="relative">
-              <div id="testimony" class="testimony swipe relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg hover:text-white shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96 before:content-[' '] before:absolute before:top-6 before:right-6 before:h-10 before:w-10 before:rounded-xl before:bg-blue-700 before:transition-all before:duration-[300ms] hover:before:top-0 hover:before:right-0 hover:before:w-full hover:before:h-full">
+              <div id="testimony" class="testimony testimony-to-show swipe relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg hover:text-white shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96 before:content-[' '] before:absolute before:top-6 before:right-6 before:h-10 before:w-10 before:rounded-xl before:bg-blue-700 before:transition-all before:duration-[300ms] hover:before:top-0 hover:before:right-0 hover:before:w-full hover:before:h-full">
                 <div class="z-10">
                   <div id="testimony-data">
                     I’ve used quite a number of e-commerce platforms, but Selar’s amazing! They’re truly interested in your growth and are constantly listening to the customers and tweaking and fine tuning their app. They do the heavy lifting Totally recommend them! 
@@ -164,11 +164,51 @@
   const animationcomeup2 = document.querySelector('.comeup2')
   const firstImage = document.querySelector('.firstImage')
   const secondImage = document.querySelector('.secondImage')
+  const testimonyToShow = document.querySelector('.testimony-to-show')
   let count = 0
 
   testimonyData.forEach((testimony) => {
     const dot = document.createElement('div')
-    dot.classList.add('w-2', 'h-2', 'transition-all', 'bg-blue-700', 'rounded-full', 'opacity-50', 'dot')
+    dot.classList.add('w-2', 'h-2', 'transition-all', 'bg-blue-700', 'rounded-full', 'opacity-50', 'dot', 'cursor-pointer')
+    dot.addEventListener('click', (e) =>
+    {
+      // console.log(e)
+      const getAllDot = document.querySelectorAll('.dot')
+      const getAllDotArray = Object.values(getAllDot)
+      console.log(getAllDotArray.indexOf(e.target))
+      count = getAllDotArray.indexOf(e.target)
+      
+
+      firstImage.classList.add('animate-fadeout')
+      secondImage.classList.add('animate-fadein')
+    
+      setTimeout(async() => {
+        await animation.classList.remove('animate-swipe')
+        animationcomeup.classList.remove('animate-comeup')
+        animationcomeup2.classList.remove('animate-comeup2')
+        firstImage.classList.remove('animate-fadeout')
+        secondImage.classList.remove('animate-fadein')
+      }, 800)
+
+      animation.classList.add('animate-swipe')
+      animationcomeup.classList.add('animate-comeup')
+      animationcomeup2.classList.add('animate-comeup2')
+
+      setTimeout(() => {
+        testimonyToShow.querySelector('#testimony-data').textContent = testimonyData[count].message
+        testimonyToShow.querySelector('#name').textContent = testimonyData[count].name
+        testimonyToShow.querySelector('#username').textContent = testimonyData[count].username
+        firstImage.src = testimonyData[count].photo
+        if (count >= testimonyData.length - 1)  {
+          secondImage.src = testimonyData[0].photo
+        } else {
+          secondImage.src =testimonyData[count].photo
+        }
+        
+      }, 800)
+
+      toggleDot()
+    })
     selection.appendChild(dot)
   })
 
@@ -189,7 +229,43 @@
     testimony.src = testimonyData[index].photo
   })
 
+  function nextTestimonyNew () {
+    count += 1
+    if (count >= testimonyData.length) {
+      count = 0
+    }
+
+    firstImage.classList.add('animate-fadeout')
+    secondImage.classList.add('animate-fadein')
   
+    setTimeout(async() => {
+      await animation.classList.remove('animate-swipe')
+      animationcomeup.classList.remove('animate-comeup')
+      animationcomeup2.classList.remove('animate-comeup2')
+      firstImage.classList.remove('animate-fadeout')
+      secondImage.classList.remove('animate-fadein')
+    }, 800)
+
+    animation.classList.add('animate-swipe')
+    animationcomeup.classList.add('animate-comeup')
+    animationcomeup2.classList.add('animate-comeup2')
+
+    setTimeout(() => {
+      testimonyToShow.querySelector('#testimony-data').textContent = testimonyData[count].message
+      testimonyToShow.querySelector('#name').textContent = testimonyData[count].name
+      testimonyToShow.querySelector('#username').textContent = testimonyData[count].username
+      firstImage.src = testimonyData[count].photo
+        if (count >= testimonyData.length - 1)  {
+          secondImage.src = testimonyData[0].photo
+        } else {
+          secondImage.src =testimonyData[count].photo
+        }
+
+    }, 800)
+
+    toggleDot()
+    
+  }
 
   function nextTestimony () {
     count += 1
@@ -237,6 +313,52 @@
     toggleDot() 
   }
 
+  function prevTestimonyNew () {
+    if (count === 0) {
+      count += testimonyData.length - 1
+    } else {
+      if (count < testimonyData.length - 1) {
+        count -= 1
+      }
+
+      if (count >= testimonyData.length - 1) {
+        count = 0
+      }
+
+    }
+
+    firstImage.classList.add('animate-fadeout')
+    secondImage.classList.add('animate-fadein')
+  
+    setTimeout(async() => {
+      await animation.classList.remove('animate-swipe')
+      animationcomeup.classList.remove('animate-comeup')
+      animationcomeup2.classList.remove('animate-comeup2')
+      firstImage.classList.remove('animate-fadeout')
+      secondImage.classList.remove('animate-fadein')
+    }, 800)
+
+    animation.classList.add('animate-swipe')
+    animationcomeup.classList.add('animate-comeup')
+    animationcomeup2.classList.add('animate-comeup2')
+
+    setTimeout(() => {
+      testimonyToShow.querySelector('#testimony-data').textContent = testimonyData[count].message
+      testimonyToShow.querySelector('#name').textContent = testimonyData[count].name
+      testimonyToShow.querySelector('#username').textContent = testimonyData[count].username
+      firstImage.src = testimonyData[count].photo
+        if (count >= testimonyData.length - 1)  {
+          secondImage.src = testimonyData[0].photo
+        } else {
+          secondImage.src =testimonyData[count].photo
+        }
+
+    }, 800)
+
+    toggleDot()
+  }
+
+  
   function prevTestimony () {
 
     if (count === 0) {
@@ -306,8 +428,8 @@
 
   }
   
-  nextButton.addEventListener('click', nextTestimony)
-  prevButton.addEventListener('click', prevTestimony)
+  nextButton.addEventListener('click', nextTestimonyNew)
+  prevButton.addEventListener('click', prevTestimonyNew)
 
   
 
