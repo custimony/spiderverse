@@ -26,15 +26,15 @@
             </button>
           </div> 
           <div class="relative w-full px-6 md:w-8/12 md:px-6">
-            <div class="relative z-40 w-24 h-24 mx-auto transform translate-y-12 rounded-full md:transform-none md:absolute md:w-40 md:h-40 md:-top-16 md:-left-12">
-              <img id="testimony-image" src="" class="absolute inset-0 object-cover w-full h-full rounded-full"> 
-              <img id="testimony-image" src="" class="absolute  inset-0 object-cover w-full h-full rounded-full">
-              <img id="testimony-image" src="" class="absolute inset-0 object-cover w-full h-full rounded-full">
-              <img id="testimony-image" src="" class="absolute inset-0 object-cover  w-full h-full rounded-full">
+            <div class="relative z-40 w-24 h-24 mx-auto transform translate-y-12 rounded-full border-8 border-white md:transform-none md:absolute md:w-40 md:h-40 md:-top-16 md:-left-12">
+              <img id="testimony-image" src="" class="firstImage absolute w-full h-full z-20 border-white border object-cover inset-0 rounded-full"> 
+              <img id="testimony-image" src="" class="secondImage absolute w-full h-full border-white border z-10 object-cover inset-0 rounded-full">
+              <img id="testimony-image" src="" class="absolute w-full h-full hidden object-cover inset-0 rounded-full">
+              <img id="testimony-image" src="" class="absolute w-full h-full hidden object-cover inset-0 rounded-full">
             </div> 
             <div class="relative">
-              <div id="testimony" class="testimony swipe relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96">
-                <div>
+              <div id="testimony" class="testimony swipe relative z-30 flex items-center justify-center px-6 pb-20 text-sm bg-white rounded-lg hover:text-white shadow-md pt-28 md:px-32 md:text-base md:py-0 md:pt-0 h-96 before:content-[' '] before:absolute before:top-6 before:right-6 before:h-10 before:w-10 before:rounded-xl before:bg-blue-700 before:transition-all before:duration-[300ms] hover:before:top-0 hover:before:right-0 hover:before:w-full hover:before:h-full">
+                <div class="z-10">
                   <div id="testimony-data">
                     I’ve used quite a number of e-commerce platforms, but Selar’s amazing! They’re truly interested in your growth and are constantly listening to the customers and tweaking and fine tuning their app. They do the heavy lifting Totally recommend them! 
                   </div> 
@@ -47,6 +47,9 @@
                     </p>
                   </div>
                 </div>
+                <span class="transition-colors duration-[300ms] h-10 w-10 flex items-center justify-center text-center text-white absolute top-6 right-6 ">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"></path></svg>
+                </span>
               </div> 
               <div id="testimony" class="comeup testimony come absolute top-0 z-20 flex items-center justify-center px-6 pb-20 mx-3 text-sm transform translate-y-2 bg-white rounded-lg shadow-md pt-28 md:translate-y-3 md:px-32 md:text-base md:py-0 md:pt-0 md:w-auto h-96">
                 <div>
@@ -111,13 +114,7 @@
             </button>
           </div> 
           <div class="flex items-center justify-center space-x-2 selection">
-            <!-- <div class="w-2 h-2 transition-all bg-blue-700 rounded-full"></div>
-            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
-            <div class="w-2 h-2 transition-all bg-blue-700 rounded-full opacity-50"></div>
-             -->
+            
           </div>
         </div>
     </div>
@@ -165,25 +162,10 @@
   const animation = document.querySelector('.swipe')
   const animationcomeup = document.querySelector('.comeup')
   const animationcomeup2 = document.querySelector('.comeup2')
+  const firstImage = document.querySelector('.firstImage')
+  const secondImage = document.querySelector('.secondImage')
   let count = 0
 
-  // const testimonyNew = Object.values(testimony)
-  // const testimonyImageNew = Object.values(testimonyImage)
-
-  // testimonyNew.map(async data => {
-  //   data.textContent = await testimonyData[testimonyNew.indexOf(data)].message
-  // })
-
-  // testimonyImageNew.map(data => {
-  //   data.src = testimonyImageNew[testimonyImageNew.indexOf(data)].photo
-    
-  // })
-
-  // testimony.forEach((data) => {
-  //   console.log(testmony.indexOf(data))
-
-  
-  // })
   testimonyData.forEach((testimony) => {
     const dot = document.createElement('div')
     dot.classList.add('w-2', 'h-2', 'transition-all', 'bg-blue-700', 'rounded-full', 'opacity-50', 'dot')
@@ -203,8 +185,7 @@
     toggleDot()
   })
 
-  testimonyImage.forEach((testimony, index) => {
-    
+  testimonyImage.forEach((testimony, index) => { 
     testimony.src = testimonyData[index].photo
   })
 
@@ -224,11 +205,15 @@
       testimonyData.push(first)
     }
 
+    firstImage.classList.add('animate-fadeout')
+    secondImage.classList.add('animate-fadein')
     
     setTimeout(async() => {
       await animation.classList.remove('animate-swipe')
       animationcomeup.classList.remove('animate-comeup')
       animationcomeup2.classList.remove('animate-comeup2')
+      firstImage.classList.remove('animate-fadeout')
+      secondImage.classList.remove('animate-fadein')
     }, 800)
 
     animation.classList.add('animate-swipe')
@@ -244,12 +229,11 @@
         name.textContent = testimonyData[index].name
         username.textContent = testimonyData[index].username
       })
-
+      testimonyImage.forEach((testimony, index) => {
+        testimony.src = testimonyData[index].photo
+      })
     }, 800)
-    testimonyImage.forEach((testimony, index) => {
-      testimony.src = testimonyData[index].photo
     
-    })
     toggleDot() 
   }
 

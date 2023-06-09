@@ -62,14 +62,30 @@ module.exports = {
               'z-index': '30'
           }
           
-          },
-          comeup2: {
+        },
+        comeup2: {
             '100%': {
               'margin-left': '0.75rem',
               'margin-right': '0.75rem',
               transform: 'translateY(0.75rem)',
               'z-index': '20'
             }
+        },
+        fadeout: {
+          '0%': {
+            opacity: '1'
+          },
+          '100%': {
+            opacity: '0'
+          }
+        },
+        fadein: {
+          '0%': {
+            opacity: '0'
+          },
+          '100%': {
+            opacity: '1'
+          }
         }
       },
       boxShadow: {
@@ -92,7 +108,9 @@ module.exports = {
         swipe: 'swipe .75s ease-in-out 1',
         rotating: 'rotating 30s linear infinite',
         comeup: 'comeup .75s ease-in-out 1',
-        comeup2: 'comeup2 .75s ease-in-out 1'
+        comeup2: 'comeup2 .75s ease-in-out 1',
+        fadeout: 'fadeout .75s ease-in-out 1',
+        fadein: 'fadein .75s ease-in-out 1'
       },
 
     },
