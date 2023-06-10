@@ -106,10 +106,10 @@
         </div>
         <div class="mt-20">
           <div class="flex items-center justify-center mb-12 space-x-10 md:hidden">
-            <button class="rounded-full focus:ring-1 ring-white ring-opacity-10 bg-blue-700 ring-offset-2 focus:outline-none">
+            <button id="smallPrevBtn" class="rounded-full focus:ring-1 ring-white ring-opacity-10 bg-blue-700 ring-offset-2 focus:outline-none">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button> 
-            <button class="transform rotate-180 rounded-full focus:ring-1 bg-blue-700 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
+            <button id="smallNextBtn" class="transform rotate-180 rounded-full focus:ring-1 bg-blue-700 ring-white ring-opacity-10 ring-offset-2 focus:outline-none">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12"><circle r="20" transform="matrix(1 0 0 -1 20 20)" fill="white" fill-opacity="0.1"></circle> <path d="M23.125 13.75L16.875 20L23.125 26.25" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </button>
           </div> 
@@ -159,6 +159,8 @@
   const selection = document.querySelector('.selection')
   const nextButton = document.getElementById('nextbtn')
   const prevButton = document.getElementById('prevbtn')
+  const smallNextButton = document.getElementById('smallNextBtn')
+  const smallPrevButton = document.getElementById('smallPrevBtn')
   const animation = document.querySelector('.swipe')
   const animationcomeup = document.querySelector('.comeup')
   const animationcomeup2 = document.querySelector('.comeup2')
@@ -459,6 +461,8 @@
   
   nextButton.addEventListener('click', nextTestimonyNew)
   prevButton.addEventListener('click', prevTestimonyNew)
+  smallNextButton.addEventListener('click', nextTestimonyNew)
+  smallPrevButton.addEventListener('click', prevTestimonyNew)
 
   
 
