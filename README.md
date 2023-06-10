@@ -1,1 +1,1 @@
-<h1> <strong> CUSTIMONY TESTIMONY TEMPLATES </strong> </h1>
+<h1> <strong> CUSTIMONY TESTIMONIAL TEMPLATES </strong> </h1>
