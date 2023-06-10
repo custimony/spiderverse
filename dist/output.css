@@ -1664,6 +1664,11 @@ video {
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1748,6 +1753,21 @@ video {
     padding-bottom: 0px;
   }
 
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:pb-6 {
     padding-bottom: 1.5rem;
   }
@@ -1782,6 +1802,11 @@ video {
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
